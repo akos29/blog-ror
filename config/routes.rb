@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/about'
   get 'users/index'
   get 'users/show'
   get 'users/edit'
