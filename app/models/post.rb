@@ -17,7 +17,7 @@ class Post < ApplicationRecord
   has_many :likes
 
   # updates the posts counter for a user
-  
+
   # returns the 5 most recent comments for a given post.
   def show
     @recent_comments = Comment.where(post_id: id).first(5)

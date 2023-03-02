@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     # @users = User.find(params[:id])
-    @recent_posts = Post.where(author_id: self.id)
+    @recent_posts = Post.where(author_id: id)
   end
 
   def edit
