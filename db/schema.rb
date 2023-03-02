@@ -44,11 +44,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_174924) do
     t.index ["author_id"], name: "index_posts_on_author_id"
   end
 
-  create_table "posts_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "post_id", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.text "bio"
