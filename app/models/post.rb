@@ -10,7 +10,7 @@
 #  author_id  :bigint           not null
 #
 class Post < ApplicationRecord
-  belogns_to :user
+  belongs_to :user
   has_many :comments
   has_many :likes
 end
