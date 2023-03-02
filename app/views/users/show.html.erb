@@ -1,2 +1,10 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+<p></p>
+<div>
+  <% @recent_posts.each do |post| %>
+    <h2><%= post.title %></h2> 
+    <p><%= post.text %></p> 
+    <%# link_to  %>
+  <% end %>
+</div>

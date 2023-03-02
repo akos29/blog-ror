@@ -2,12 +2,13 @@
 #
 # Table name: users
 #
-#  id         :bigint           not null, primary key
-#  name       :string
-#  bio        :text
-#  photo      :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id            :bigint           not null, primary key
+#  name          :string
+#  bio           :text
+#  photo         :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  posts_counter :integer
 #
 require 'test_helper'
 
