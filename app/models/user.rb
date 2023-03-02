@@ -2,13 +2,13 @@
 #
 # Table name: users
 #
-#  id            :bigint           not null, primary key
-#  name          :string
-#  bio           :text
-#  photo         :string
-#  created_at    :datetime         not null
-#  updated_at    :datetime         not null
-#  posts_counter :integer
+#  id          :bigint           not null, primary key
+#  name        :string
+#  bio         :text
+#  photo       :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  posts_count :integer
 #
 class User < ApplicationRecord
   has_many :posts, foreign_key: 'author_id'
