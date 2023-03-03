@@ -31,4 +31,14 @@ RSpec.describe Post, type: :model do
     comment = Comment.create(post: subject, author: user, text: 'my comment')
     expect(comment.text).to eq('my comment')
   end
+  
+  it 'is should show recent comments through (show_recent_comments) ' do
+    Comment.create(post: subject, author: user, text: 'my comment')
+    expect(subject.show_recent_comments.length).to eq 1
+  end
+  it 'is should update post counter' do
+    previous_count = user.posts_count
+    subject.save
+    expect(user.posts_count).to eq(previous_count + 1)
+  end
 end
