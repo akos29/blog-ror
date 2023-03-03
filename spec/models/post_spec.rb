@@ -31,7 +31,7 @@ RSpec.describe Post, type: :model do
     comment = Comment.create(post: subject, author: user, text: 'my comment')
     expect(comment.text).to eq('my comment')
   end
-  
+
   it 'is should show recent comments through (show_recent_comments) ' do
     Comment.create(post: subject, author: user, text: 'my comment')
     expect(subject.show_recent_comments.length).to eq 1
