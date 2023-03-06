@@ -12,6 +12,13 @@
 #  likes_count    :integer
 #
 class Post < ApplicationRecord
+  attribute :comments_count, :integer, default: 0
+  attribute :likes_count, :integer, default: 0
+
+  validates :title, presence: true, length: { in: 1..250 }
+  validates :comments_count, comparison: { greater_than_or_equal_to: 0 }
+  validates :likes_count, comparison: { greater_than_or_equal_to: 0 }
+
   belongs_to :author, class_name: 'User', foreign_key: 'author_id', counter_cache: true
   has_many :comments
   has_many :likes
