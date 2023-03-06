@@ -1,0 +1,15 @@
+<h1>Posts List</h1>
+
+  <% @posts.each do |post| %>
+  <%# <%= user.photo%>
+    <div>
+      <%= image_tag("https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80", :size => "80x110", :alt => "Example Image", :title => "Example") %>
+      <h2><%= post.title %></h2> 
+      <%= post.text %>
+    </div>
+    <div>
+      Likes: #<%= post.likes_count %>
+      Comments: #<%= post.comments_count %>
+    </div> 
+    <%# link_to  %>
+  <% end %>
