@@ -4,7 +4,6 @@ RSpec.describe 'PostsController', type: :request do
   user = User.create(name: 'Abebe', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
                      bio: 'Teacher from Mexico.')
 
-
   subject { Post.new(author: user, title: 'About Rais Rspec', text: 'Hello Rspec request') }
 
   before { subject.save }
