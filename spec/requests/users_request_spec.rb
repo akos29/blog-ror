@@ -16,7 +16,7 @@ RSpec.describe 'UsersController', type: :request do
       user2 = User.create(name: 'Abebe', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
                           bio: 'Teacher from Mexico.')
 
-      get '/users'
+      get users_path
 
       expect(response).to have_http_status(200)
       expect(response.body).to include(user1.name)
