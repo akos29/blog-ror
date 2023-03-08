@@ -1,9 +1,5 @@
 <h1>Posts List</h1>
-  <div class= 'user_profile'>
-    <%= image_tag(@user.photo, :size => "80x110", :alt => "Profile Picture of #{@user.name}", :title => "#{@user.name}") %>
-    <h2><%= @user.name %></h2> 
-    <%= @user.posts_count %>
-  </div> 
+  <%= render "shared/user", user: @user %>
   <% @posts.each do |post| %>
   <%# <%= user.photo%>
     
