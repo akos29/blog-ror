@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>    
+  <div class='post_container'>
+    <h2><%= post.title %></h2> 
+    <%= post.text %>
+    <div>
+      Likes: #<%= post.likes_count %>
+      Comments: #<%= post.comments_count %>
+    </div>
+  </div>
+  <div class='comment_container'>
+    <% post.show_recent_comments.each do |c|%>
+      <p><%= @user.name %><%= c.text%></p>
+    <% end %>
+  </div>
+<% end %>
