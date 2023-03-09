@@ -1,7 +1,30 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.includes(:comments)
+    @posts = @user.posts.includes(:comments).order(created_at: :desc)
+  end
+
+  def new
+    post = Post.new
+    respond_to do |format|
+      format.html { render :new, locals: { post: } }
+    end
+  end
+
+  def create
+    @user = User.find(params[:user_id])
+    post = Post.new(params.require(:post).permit(:title, :text).merge(author_id: @user.id))
+    respond_to do |format|
+      format.html do
+        if post.save
+          flash[:success] = 'Post created successfully'
+          redirect_to user_posts_path
+        else
+          flash.now[:error] = 'Error: Post could not be saved'
+          render :new, locals: { post: }
+        end
+      end
+    end
   end
 
   def show
