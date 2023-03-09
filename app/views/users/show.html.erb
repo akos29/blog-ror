@@ -1,12 +1,7 @@
 <h1>Welcome, <%= @user.name %></h1>
-<div>
-  <%= render "shared/user", user: @user %>
+<%= render "shared/user", user: @user %>
   <div class = 'user_detail'>
     <h3>Bio<h3>
     <p> <%= @user.bio%><p>
-  </div>
-  <div class = 'project_detail'>
-    <h3>Project #1<h3>
-    <p> <%= %><p>
-  </div>
-</div>
+  </div>  
+<%= render "shared/posts", posts: @posts %>

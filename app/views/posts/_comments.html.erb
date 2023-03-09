@@ -1,4 +1,8 @@
-<% @comments.each do |comment| %>    
-  <%= comment.author_id %>
-  <%= comment.text %>
-<% end %>
+<div class='comment_container'>
+    <% comments.each do |comment|%>
+      <div>
+        <span><%= User.find(comment.author_id).name %>:</span> 
+        <%= comment.text%>
+      </div>
+    <% end %>
+  </div>
