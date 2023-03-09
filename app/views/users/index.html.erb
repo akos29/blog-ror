@@ -1,9 +1,4 @@
-<h1>Users List</h1>
-
-  <% @users.each do |user| %>
-    <div class= 'user_profile'>
-      <%= image_tag(user.photo, :size => "80x110", :alt => "Example Image", :title => "Example") %>
-      <h2><%= user.name %></h2> 
-      <p> Posts Count: <%= user.posts_count %></p>
-  </div> 
-  <% end %>
+<div class='users_container'>
+  <h1>Users List</h1>
+  <%= render "users", users: @users %>
+</div>
