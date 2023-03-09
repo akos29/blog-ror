@@ -12,8 +12,9 @@ class PostsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
-    post = Post.new(params.require(:post).permit(:title, :text).merge(author_id: @user.id))
+    # @user = User.find(params[:user_id])
+    @current_user = current_user
+    post = Post.new(params.require(:post).permit(:title, :text).merge(author_id: @current_user.id))
     respond_to do |format|
       format.html do
         if post.save
