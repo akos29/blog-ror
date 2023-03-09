@@ -19,6 +19,23 @@
   --secondary: #69e141;
   --text-primary: #fff;
   --text-secondary: #e14169;
+  --primary-bg: #17191a;
+  --secondary-bg: rgb(34, 37, 39);
+}
+
+* {
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--primary-bg) !important;
+}
+
+.container-fluid,
+.navbar,
+.bg-body-tertiary {
+  background-color: var(--secondary-bg) !important;
+ 
 }
 
 a:link {
@@ -32,6 +49,12 @@ a:visited {
 
 a:active {
   color: var(--text-secondary);
+}
+
+.btn {
+  background-color: #4169e1 !important;
+  color: var(--text-primary) !important;
+  margin-top: 20px;
 }
 
 .user_profile {
