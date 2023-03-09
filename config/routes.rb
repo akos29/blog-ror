@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'comments/index'
-  get 'comments/show'
   get 'home/about'
   
  
@@ -11,10 +9,7 @@ Rails.application.routes.draw do
   # end
   root 'users#index'
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show] do
-      resources :comments, only: [:index, :show]
-      resources :likes, only: [:index, :show]
-    end
+    resources :posts, only: [:index, :show]
   end
   # resource :users, only: [:index, :show]  
   
