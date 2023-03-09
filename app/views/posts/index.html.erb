@@ -1,4 +1,4 @@
 <h1>Posts List</h1>
   <%= render "shared/user", user: @user %>
-  <%= link_to 'Create New', new_user_post_path %>
+  <%= link_to 'Create New', new_user_post_path , class: 'btn' %>
   <%= render "posts", posts: @posts %>
