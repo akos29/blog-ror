@@ -9,5 +9,9 @@
   </div>
   <%= render "comments", comments: post.show_recent_comments %>
   <%= link_to 'Add Comment', new_user_post_comment_path(post_id: post.id), class: 'btn' %>
+    
+    
+    <% like_status = is_liked?(current_user,post) %>
+    <%= button_to "#{ like_status ? 'Liked': 'Like' }", user_post_likes_path(current_user, post), method: :post , class: "#{like_status ? 'btn disabled' : 'btn' }" %>
 
 <% end %>

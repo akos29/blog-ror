@@ -8,4 +8,7 @@
     <p> <%= @post.text %></p>
   </div>
   <%= render "comments", comments: @comments %>
+  
+  <% like_status = is_liked?(current_user,@post) %>
+  <%= button_to "#{ like_status ? 'Liked': 'Like' }", user_post_likes_path(current_user, @post), method: :post , class: "#{like_status ? 'btn disabled' : 'btn' }" %>
 </div>
