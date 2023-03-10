@@ -1,19 +1,7 @@
 <h1>Welcome, <%= @user.name %></h1>
-<div>
-    
-    <div class = 'user_profile'>
-      <%= image_tag(@user.photo, :size => "80x110", :alt => "#{@user.name}", :title => "Profile Picture for #{@user.name}") %>
-       <h2><%= @user.name %></h2> 
-      <%= @user.posts_count %>
-    </div> 
-    <div class = 'user_detail'>
-      <h3>Bio<h3>
-      <p> <%= @user.bio%><p>
-    </div>
-    <div class = 'project_detail'>
-      <h3>Project #1<h3>
-      <p> <%= %><p>
-    </div>
-    <%# link_to  %>
-
-</div>
+<%= render "shared/user", user: @user %>
+  <div class = 'user_detail'>
+    <h3>Bio<h3>
+    <p> <%= @user.bio%><p>
+  </div>  
+<%= render "shared/posts", posts: @posts %>
