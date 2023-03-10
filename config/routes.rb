@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'likes/create'
   get 'comments/new'
   get 'comments/create'
   get 'comments/index'
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :posts , only: [:index, :show, :new, :create] do
       resources :comments
-      resources :likes, only: [:new, :create]
+      resources :likes, only: [:create, :destroy]
     end
   end
 
