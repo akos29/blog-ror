@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
   def like
     @post.likes.create(author_id: current_user.id)
-    # Like.create(author_id: current_user.id, post_id: @post.id)
     respond_to do |format|
       format.js { render json: { success: true } }
       format.html { redirect_to root_path }
@@ -23,7 +22,6 @@ class PostsController < ApplicationController
   end
 
   def create
-    # @user = User.find(params[:user_id])
     @current_user = current_user
     post = Post.new(params.require(:post).permit(:title, :text).merge(author_id: @current_user.id))
     respond_to do |format|
