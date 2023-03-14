@@ -27,7 +27,7 @@ class Post < ApplicationRecord
 
   # returns the 5 most recent comments for a given post.
   def show_recent_comments
-    comments.where(post_id: id).first(5)
+    comments.order(created_at: :desc).limit(5)
   end
 
   # updates the posts counter for a user
