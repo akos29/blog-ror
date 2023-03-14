@@ -121,6 +121,12 @@ To run tests, run the following command:
 - GitHub: [@akos29](https://github.com/akos29)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kibrewossen-y-mekasha/)
 
+👤 **Jorge**
+
+- GitHub: [@githubhandle](https://github.com/jorgegoco)
+- Twitter: [@twitterhandle](https://twitter.com/JorgeGo78017548)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorgegoco/)
+
 
 ## 🔭 Future Features <a name="future-features"></a>
 
