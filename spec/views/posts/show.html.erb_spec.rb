@@ -2,7 +2,7 @@ require 'rails_helper'
 RSpec.describe 'users#show', type: :feature do
   describe 'users show' do
     before(:each) do
-      @user1 = User.create!(name: 'Pepe', photo: 'https://pepe', bio: 'nobio', posts_counter: 0)
+      @user1 = User.create!(name: 'Kibre', photo: 'https://pepe', bio: 'nobio', posts_counter: 0)
       @user2 = User.create!(name: 'Pótamo', photo: 'https://pótamo', bio: 'some', posts_counter: 0)
       @post1 = @user1.posts.create!(title: 'Pepe1 Post', text: 'Pepe1 text', comments_count: 0, likes_count: 0)
       @post2 = @user1.posts.create!(title: 'Pepe2 Post', text: 'Pepe2 text', comments_count: 0, likes_count: 0)
