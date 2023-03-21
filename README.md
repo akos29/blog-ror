@@ -133,6 +133,12 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/187jjay187)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/jerome-osman-137605a4)
 
+👤 **Ahmed Abas**
+
+- GitHub: [@boo-shehab](https://github.com/boo-shehab)
+- Twitter: [@boo_shehab2000](https://twitter.com/boo_shehab2000)
+- LinkedIn: [boo-shehab](https://www.linkedin.com/in/boo-shehab)
+
 
 ## 🔭 Future Features <a name="future-features"></a>
 
