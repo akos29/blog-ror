@@ -3,9 +3,9 @@ RSpec.describe 'users#show', type: :feature do
   describe 'users show' do
     before(:each) do
       @user1 = User.create!(name: 'Abebe', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-        bio: 'Teacher from Mexico.')
-@user2 = User.create!(name: 'Kebede', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-                           bio: 'Teacher from Mexico.')
+                            bio: 'Teacher from Mexico.')
+      @user2 = User.create!(name: 'Kebede', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
+                            bio: 'Teacher from Mexico.')
       @post1 = @user1.posts.create!(title: 'Abebe Post 1', text: 'Abebe text')
       @post2 = @user1.posts.create!(title: 'Abebe2 Post', text: 'Abebe2 text')
       @post3 = @user1.posts.create!(title: 'Abebe3 Post', text: 'Abebe3 text')
@@ -46,15 +46,15 @@ RSpec.describe 'users#show', type: :feature do
       expect(page).to have_current_path("/users/#{@user1.id}/posts")
     end
 
-    scenario "I shouldn't see the user's age",negative:true do
+    scenario "I shouldn't see the user's age", negative: true do
       expect(page).to_not have_content('Age')
     end
 
-    scenario 'I should not see the number of posts the user has written other than the one created',negative:true do
+    scenario 'I should not see the number of posts the user has written other than the one created', negative: true do
       expect(page).to_not have_content('Number of Posts: 5')
     end
 
-    scenario "I should not a bio other than the user's bio", negative:true do
+    scenario "I should not a bio other than the user's bio", negative: true do
       expect(page).to_not have_content('nobio')
     end
 
@@ -68,7 +68,7 @@ RSpec.describe 'users#show', type: :feature do
 
     scenario "When I click to see all posts, it should not redirects me to the user's index page", negative: true do
       click_link 'See all posts'
-      expect(page).to_not have_current_path("/users")
+      expect(page).to_not have_current_path('/users')
     end
   end
 end

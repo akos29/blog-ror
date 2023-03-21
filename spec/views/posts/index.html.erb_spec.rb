@@ -4,9 +4,9 @@ RSpec.describe 'Posts Index', type: :feature do
   describe 'Posts index page' do
     before(:each) do
       @user1 = User.create!(name: 'Abebe', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-        bio: 'Teacher from Mexico.')
-@user2 = User.create!(name: 'Kebede', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-                           bio: 'Teacher from Mexico.')
+                            bio: 'Teacher from Mexico.')
+      @user2 = User.create!(name: 'Kebede', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
+                            bio: 'Teacher from Mexico.')
       @post1 = @user1.posts.create!(title: 'Abebe1 Post', text: 'Abebe text')
       @post2 = @user1.posts.create!(title: 'Abebe2 Post', text: 'Abebe2 text')
       @post3 = @user1.posts.create!(title: 'Abebe3 Post', text: 'Abebe3 text')
@@ -47,7 +47,7 @@ RSpec.describe 'Posts Index', type: :feature do
       expect(page).to have_content("Likes: #{@post1.likes_count}")
     end
 
-    scenario "When I click on a post, it redirects me to that post's show page", positive:true do
+    scenario "When I click on a post, it redirects me to that post's show page", positive: true do
       visit(user_post_path(@user1, @post1))
       expect(page).to have_current_path user_post_path(@user1, @post1)
     end

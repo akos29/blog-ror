@@ -4,9 +4,9 @@ RSpec.describe 'users#index', type: :feature do
   describe 'users index page' do
     before(:each) do
       @user1 = User.create!(name: 'Abebe', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-                   bio: 'Teacher from Mexico.')
+                            bio: 'Teacher from Mexico.')
       @user2 = User.create!(name: 'Kebede', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-                   bio: 'Teacher from Mexico.')
+                            bio: 'Teacher from Mexico.')
       visit root_path
     end
 

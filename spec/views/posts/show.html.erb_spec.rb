@@ -3,9 +3,9 @@ RSpec.describe 'users#show', type: :feature do
   describe 'users show' do
     before(:each) do
       @user1 = User.create!(name: 'Abebe', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-        bio: 'Teacher from Mexico.')
-@user2 = User.create!(name: 'Kebede', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-                           bio: 'Teacher from Mexico.')
+                            bio: 'Teacher from Mexico.')
+      @user2 = User.create!(name: 'Kebede', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
+                            bio: 'Teacher from Mexico.')
       @post1 = @user1.posts.create!(title: 'Abebe1 Post', text: 'Abebe text')
       @post2 = @user1.posts.create!(title: 'Abebe2 Post', text: 'Abebe2 text')
       @post3 = @user1.posts.create!(title: 'Abebe3 Post', text: 'Abebe3 text')
