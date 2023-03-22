@@ -14,7 +14,6 @@ RSpec.describe 'users#show', type: :feature do
       visit(user_path(@user1))
     end
 
-
     scenario "I can see the user's profile picture", positive: true do
       expect(page).to have_xpath("//img[contains(@src,'https://i.pravatar.cc/150?u=fake@pravatar.com')]")
     end
