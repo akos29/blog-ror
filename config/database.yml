@@ -1,39 +1,22 @@
-# PostgreSQL. Versions 9.3 and up are supported.
-#
-# Install the pg driver:
-#   gem install pg
-# On macOS with Homebrew:
-#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
-# On macOS with MacPorts:
-#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
-# On Windows:
-#   gem install pg
-#       Choose the win32 build.
-#       Install PostgreSQL and put its /bin directory on your path.
-#
-# Configure Using Gemfile
-# gem "pg"
-#
+
 default: &default
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: 4yaTX2Hv
 
 development:
   <<: *default
-  database: blog_post_development
+  database: blog_ror_development
   username: postgres
-  password: 4yaTX2Hv
+  password: "root"
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: blog_post
+  #username: blog_ror
 
   # The password associated with the postgres role (username).
   #password:
@@ -61,9 +44,9 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: blog_post_development
+  database: blog_ror_test
   username: postgres
-  password: 4yaTX2Hv
+  password: "root"
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,6 +70,6 @@ test:
 #
 production:
   <<: *default
-  database: blog_post_production
-  username: postgres
-  password: <%= ENV["nabeel"] %>
+  database: blog_ror_production
+  username: blog_ror
+  password: <%= ENV["BLOG_ROR_DATABASE_PASSWORD"] %>
