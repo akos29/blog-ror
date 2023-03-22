@@ -1,5 +1,3 @@
-<h1>Create Comment </h1>
-
 <%= form_with model: comment, url:  user_post_comments_path(post_id: params[:post_id]), method: :post, local: true, scope: :comment do |f| %>
   <%= f.hidden_field :post_id, value: params[:post_id] %>
   <div>

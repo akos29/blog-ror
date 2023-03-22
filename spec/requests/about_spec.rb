@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe 'Likes', type: :request do
-  describe 'GET /create' do
+RSpec.describe 'Abouts', type: :request do
+  describe 'GET /index' do
     it 'returns http success' do
-      get '/likes/create'
+      get '/about/index'
       expect(response).to have_http_status(:success)
     end
   end

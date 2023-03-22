@@ -1,6 +1,6 @@
   <% @users.each do |user| %>
     <div class= 'user_profile'>
-      <%= image_tag(user.photo, :size => "80x110", :alt => "#{user.name}", :title => "Profile Picture") %>
+      <img src=<%=(user.photo) %> />
       <h2><%= user.name %></h2> 
       <p> Number of Posts: <span class ='rev'><%= user.posts_count %></span></p>
     </div> 
