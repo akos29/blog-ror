@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Comments', type: :request do
-
-    let(:user) {User.create(name: 'jeje', bio: 'Hi', photo: "https://imglarger.com/Images/before-after/ai-image-enlarger-1-before-2.jpg")  } 
-    let(:post) { Post.create(text: 'Hi', title: 'bye', author_id: user.id) } 
+  let(:user) do
+    User.create(name: 'jeje', bio: 'Hi',
+                photo: 'https://imglarger.com/Images/before-after/ai-image-enlarger-1-before-2.jpg')
+  end
+  let(:post) { Post.create(text: 'Hi', title: 'bye', author_id: user.id) }
 
   describe 'GET /new' do
     it 'returns http success' do

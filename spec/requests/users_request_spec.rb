@@ -13,7 +13,7 @@ RSpec.describe 'UsersController', type: :request do
     end
     it 'test response body' do
       get users_path
-      expect(response.body).to include "Users List"
+      expect(response.body).to include 'Users List'
     end
   end
 
