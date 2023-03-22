@@ -1,11 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe 'UsersController', type: :request do
-  describe 'GET index template' do
-    before { get '/users', params: { format: :html } }
-
-    it 'renders the index template' do
+  describe 'GET /index' do
+    let(:user) { User.create(name: 'Ahmed', photo: 'image', bio: 'bio') }
+    it 'Status test' do
+      get users_path
+      expect(response).to have_http_status(200)
+    end
+    it 'template test' do
+      get users_path
       expect(response).to render_template('index')
+    end
+    it 'test response body' do
+      get users_path
+      expect(response.body).to include "Users List"
     end
   end
 
