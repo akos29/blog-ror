@@ -10,8 +10,8 @@ RSpec.describe 'PostsController', type: :request do
 
   describe 'GET #index' do
     it 'displays all posts' do
-      get "/users/#{user.id}/posts"
-
+      # get "/users/#{user.id}/posts"
+      visit(user_posts_path(user))
       expect(response).to have_http_status(200)
       expect(response.body).to include(user.name)
       expect(response.body).to include(subject.title)
