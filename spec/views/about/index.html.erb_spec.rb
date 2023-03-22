@@ -4,7 +4,6 @@ RSpec.describe 'about/index.html.erb', type: :system do
   describe 'user index page' do
     it 'shows the right content', negative: true do
       visit about_index_path
-      sleep(2)
       expect(page).to_not have_content('Posts')
     end
 
