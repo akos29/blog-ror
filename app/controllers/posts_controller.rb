@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:like]
+  before_action :find_post, only: [:like], :authenticate_user!
 
   def like
     @post.likes.create(author_id: current_user.id)

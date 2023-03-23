@@ -9,6 +9,16 @@
 #  author_id  :bigint           not null
 #  post_id    :bigint           not null
 #
+# Indexes
+#
+#  index_comments_on_author_id  (author_id)
+#  index_comments_on_post_id    (post_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (author_id => users.id)
+#  fk_rails_...  (post_id => posts.id)
+#
 class Comment < ApplicationRecord
   belongs_to :author, class_name: 'User'
   belongs_to :post, counter_cache: true
