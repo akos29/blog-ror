@@ -3,13 +3,21 @@
 # Table name: posts
 #
 #  id             :bigint           not null, primary key
-#  title          :string
+#  comments_count :integer
+#  likes_count    :integer
 #  text           :text
+#  title          :string
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  author_id      :bigint           not null
-#  comments_count :integer
-#  likes_count    :integer
+#
+# Indexes
+#
+#  index_posts_on_author_id  (author_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (author_id => users.id)
 #
 require 'test_helper'
 

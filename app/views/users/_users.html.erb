@@ -1,7 +1,10 @@
   <% @users.each do |user| %>
+  
+ 
     <div class= 'user_profile'>
       <img src=<%=(user.photo) %> />
       <h2><%= user.name %></h2> 
-      <p> Number of Posts: <span class ='rev'><%= user.posts_count %></span></p>
+      <p> Number of Posts: <span class ='rev'><%= user.posts_count %></span></p> 
+      <%# <%= link_to 'View More', user_path(user_id: user.id), class: 'btn' %> %>
     </div> 
   <%end%>
