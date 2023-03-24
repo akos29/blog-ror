@@ -1,13 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:like], :authenticate_user!
-
-  def like
-    @post.likes.create(author_id: current_user.id)
-    respond_to do |format|
-      format.js { render json: { success: true } }
-      format.html { redirect_to root_path }
-    end
-  end
+  before_action :authenticate_user!
 
   def index
     @user = User.find_by_id(params[:user_id])
