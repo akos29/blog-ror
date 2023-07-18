@@ -30,6 +30,7 @@ RSpec.describe 'PostsController', type: :request do
 
       expect(response).to have_http_status(200)
       expect(response.body).to include(subject.text)
+      expect(response).to render_template(:show)
     end
   end
 end

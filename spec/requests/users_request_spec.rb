@@ -32,6 +32,7 @@ RSpec.describe 'UsersController', type: :request do
 
       expect(response).to have_http_status(200)
       expect(response.body).to include(user1.name)
+      expect(response).to render_template(:show)
     end
   end
 end
