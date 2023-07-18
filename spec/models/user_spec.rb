@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'is should show recent posts (show_recent_posts) ' do
-    Post.create(author: subject, title: 'About Rais Rspec', text: 'Hello')
+    Post.create(author: subject, title: 'About Rails Rspec', text: 'Hello')
     expect(subject.show_recent_posts.length).to eq 1
   end
 end

@@ -1,15 +1,9 @@
 Rails.application.routes.draw do
   get 'home/about'
   
- 
-  # get 'users', to: 'users#index'
-  # get 'users/:id', to: 'users#show'
-  #   get 'posts', to: 'posts#index'
-  #   get 'posts/:id', to: 'posts#show'
-  # end
   root 'users#index'
-  resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+  resources :users do
+    resources :posts, shallow: true
   end
   # resource :users, only: [:index, :show]  
   
