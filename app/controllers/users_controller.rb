@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new
     # render :new
   end
+
   def show
     @user = User.find(params[:id])
     # @posts = @user.show_recent_posts
@@ -26,5 +27,4 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @likes = @user.likes.first(3)
   end
-
 end
