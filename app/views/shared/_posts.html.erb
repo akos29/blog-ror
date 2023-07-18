@@ -1,10 +1,4 @@
-<h1>Welcome, <%= @user.name %></h1>
-<%= render "shared/user", user: @user %>
-  <div class = 'user_detail'>
-    <h3>Bio<h3>
-    <p> <%= @user.bio%><p>
-  </div>  
-<% @user.show_recent_posts.each do |post| %>    
+<% @posts.each do |post| %>    
   <div class='post_container'>
     <h2><%= post.title %></h2> 
     <%= truncate_text(post.text,100) %>
@@ -14,4 +8,3 @@
     </div>
   </div>
 <% end %>
-<%= link_to 'See all posts', user_posts_path(user_id: @user.id), class: 'btn' %>

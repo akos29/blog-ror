@@ -121,6 +121,24 @@ To run tests, run the following command:
 - GitHub: [@akos29](https://github.com/akos29)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kibrewossen-y-mekasha/)
 
+👤 **Jorge**
+
+- GitHub: [@githubhandle](https://github.com/jorgegoco)
+- Twitter: [@twitterhandle](https://twitter.com/JorgeGo78017548)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jorgegoco/)
+
+👤 **Jerome**
+
+- GitHub: [@githubhandle](https://github.com/187jjay187)
+- Twitter: [@twitterhandle](https://twitter.com/187jjay187)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/jerome-osman-137605a4)
+
+👤 **Ahmed Abas**
+
+- GitHub: [@boo-shehab](https://github.com/boo-shehab)
+- Twitter: [@boo_shehab2000](https://twitter.com/boo_shehab2000)
+- LinkedIn: [boo-shehab](https://www.linkedin.com/in/boo-shehab)
+
 
 ## 🔭 Future Features <a name="future-features"></a>
 
