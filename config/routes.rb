@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   get 'home/about'
   
   root 'users#index'
-  resources :users do
-    resources :posts, shallow: true
+  resources :users, only: [:index, :show] do
+    resources :posts, only: [:index, :show]
   end
   # resource :users, only: [:index, :show]  
   
