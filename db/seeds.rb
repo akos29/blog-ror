@@ -1,10 +1,10 @@
 user = User.create!(
   name: 'Abebe',
   bio: 'Story of Abe\'s life ...',
-  photo: 'url'
+  photo: 'https://wallpapers.com/images/high/cool-profile-picture-1ecoo30f26bkr14o.webp'
 )
-second_user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
-first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
+second_user = User.create(name: 'Lilly', photo: 'https://wallpapers.com/images/high/cool-profile-picture-1ecoo30f26bkr14o.webp', bio: 'Teacher from Poland.')
+first_user = User.create(name: 'Tom', photo: 'https://wallpapers.com/images/high/cool-profile-picture-1ecoo30f26bkr14o.webp', bio: 'Teacher from Mexico.')
 
 
 first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
