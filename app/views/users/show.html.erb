@@ -4,4 +4,18 @@
     <h3>Bio<h3>
     <p> <%= @user.bio%><p>
   </div>  
-<%= render "shared/posts", posts: @posts %>
+
+  <div>
+    <% @user.show_recent_posts.each do |post| %>
+      <div class='post-card'>
+        <h3><%=link_to post.title, user_post_path(@user.id, post), :class => 'post-title'%></h3>
+        <p><%= post.text %></p>
+        <div class='likes-comments'>
+          <p>Comments: <%= post.comments_count.nil? ? 0 : post.comments_count %></p>
+          <p>Likes: <%= post.likes_count.nil? ? 0 : post.likes_count %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+  <button><%=link_to 'See all posts', user_posts_path(@user), :class => 'see-all-btn'%></button>
