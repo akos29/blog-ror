@@ -2,10 +2,18 @@
   <div class='post_container'>
     <h2><%= post.title %></h2> 
     <%= post.text %>
-    <div>
-      Likes: #<%= post.likes_count %>
-      Comments: #<%= post.comments_count %>
+    <div class='likes_comments_count_right'>
+      <span>Likes: <span class ='rev'><%= post.likes_count %></span></span>
+      <span>Comments: <span class ='rev'><%= post.comments_count %></span></span>
     </div>
   </div>
-  <%= render "comments", comments: post.show_recent_comments %>
+  
+  <%= render "comments", locals: { comments: post }%>
+  <div class= 'container_footer'>
+    <%= link_to 'Add Comment', new_user_post_comment_path(post_id: post.id), class: 'btn' %>
+      
+      
+      <% like_status = liked?(current_user,post) %>
+      <%= button_to "#{ like_status ? 'Liked': 'Like' }", user_post_likes_path(current_user, post), method: :post , class: "#{like_status ? 'btn disabled' : 'btn' }" %>
+  </div>
 <% end %>

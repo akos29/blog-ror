@@ -1,5 +1,4 @@
-  
-  <div class='post-card'>
+<div class='post-card'>
   <div class='post-header'>
     <h2>"<%= @post.title %>" by: <%= User.find(@post.author_id).name %></h2>
     <div class='likes-comments'>
@@ -7,5 +6,5 @@
       <p>Likes: <%= @post.likes_count.nil? ? 0 : @post.likes_count %></p>
     </div>
   </div>
-  <p><%= @post.text %></p>
+<p><%= @post.text %></p>
 </div>

@@ -19,6 +19,28 @@
   --secondary: #69e141;
   --text-primary: #fff;
   --text-secondary: #e14169;
+  --primary-bg: #17191a;
+  --secondary-bg: rgb(34, 37, 39);
+}
+
+* {
+  color: var(--text-primary);
+}
+
+input,
+textarea {
+  color: var(--primary-bg);
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: var(--primary-bg) !important;
+}
+
+.container-fluid,
+.navbar,
+.bg-body-tertiary {
+  background-color: var(--secondary-bg) !important;
 }
 
 a:link {
@@ -34,15 +56,26 @@ a:active {
   color: var(--text-secondary);
 }
 
+.btn {
+  background-color: #4169e1 !important;
+  color: var(--text-primary) !important;
+  margin-top: 20px;
+}
+
 .user_profile {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--primary);
   color: var(--text-primary);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin-top: 20px;
+}
+
+.user_profile > img {
+  width: 10px;
+  height: auto;
 }
 
 .users_container {
@@ -76,6 +109,7 @@ a:active {
   padding: 1rem;
   margin-top: 15px;
   font-size: 1.25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
 }
 
 .post_container > div {
@@ -95,4 +129,30 @@ a:active {
   border-radius: 4px;
   color: var(--text-primary);
   padding-right: 5rem;
+}
+
+.container_footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.likes_comments_count_right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 20px;
+}
+
+.likes_comments_count_right > span {
+  color: var(--secondary);
+  font-size: 1.25rem;
+}
+
+.rev {
+  color: var(--primary-bg);
+  background-color: var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
 }

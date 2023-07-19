@@ -11,7 +11,6 @@ RSpec.describe 'PostsController', type: :request do
   describe 'GET #index' do
     it 'displays all posts' do
       get "/users/#{user.id}/posts"
-
       expect(response).to have_http_status(200)
       expect(response.body).to include(user.name)
       expect(response.body).to include(subject.title)
@@ -30,6 +29,7 @@ RSpec.describe 'PostsController', type: :request do
 
       expect(response).to have_http_status(200)
       expect(response.body).to include(subject.text)
+      expect(response).to render_template(:show)
     end
   end
 end

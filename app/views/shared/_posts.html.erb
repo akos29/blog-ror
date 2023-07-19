@@ -2,9 +2,9 @@
   <div class='post_container'>
     <h2><%= post.title %></h2> 
     <%= truncate_text(post.text,100) %>
-    <div>
-      Likes: #<%= post.likes_count %>
-      Comments: #<%= post.comments_count %>
+    <div class='likes_comments_count_right'>
+      <span>Likes: <span class ='rev'><%= post.likes_count %></span></span>
+      <span>Comments: <span class ='rev'><%= post.comments_count %></span></span>
     </div>
   </div>
 <% end %>
