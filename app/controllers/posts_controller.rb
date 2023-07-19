@@ -4,9 +4,8 @@ class PostsController < ApplicationController
     @posts = @user.posts.includes(:comments)
   end
 
-  def show
-    @user = User.find(params[:user_id])
-    @post = @user.posts.find(params[:id])
-    @comments = @post.comments.order(:created_at)
+  def show 
+    @post = Post.find(params[:id])
+    @comments = @post.comments.includes(:author)
   end
 end
