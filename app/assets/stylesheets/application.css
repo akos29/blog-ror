@@ -143,7 +143,7 @@ a:active {
 }
 
 .container_footer a.btn {
-  background-color: var(--primary)!important;
-  color: var(--text-primary)!important;
+  background-color: var(--primary) !important;
+  color: var(--text-primary) !important;
   margin-top: 20px;
 }
