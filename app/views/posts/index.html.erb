@@ -1,5 +1,6 @@
 <h1>Posts List</h1>
   <%= render "shared/user", user: @user %>
+  <%= render "posts", posts: @posts %>
   <% @posts.each do |post| %>
     <div class='post-card'>
       <h3><%=link_to post.title, user_post_path(@user.id, post), :class => 'post-title'%></h3>
@@ -15,4 +16,3 @@
       <% end %>
     </div>
   <% end %> 
-
