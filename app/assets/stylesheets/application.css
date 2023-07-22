@@ -58,6 +58,11 @@ a:active {
   margin-top: 20px;
 }
 
+.user_profile > img {
+  width: 10px;
+  height: auto;
+}
+
 .users_container {
   padding: 2rem 0;
   margin-bottom: 1rem;

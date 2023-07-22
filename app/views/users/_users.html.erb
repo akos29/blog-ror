@@ -1,4 +1,5 @@
   <% @users.each do |user| %>
+  
     <div class= 'user_profile'>
       <%= image_tag(user.photo, :size => "80x110", :alt => "#{user.name}", :title => "Profile Picture") %>
       <h2><%=link_to user.name, user_path(id: user.id)%></h2>
