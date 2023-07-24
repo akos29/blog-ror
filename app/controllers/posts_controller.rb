@@ -38,14 +38,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:user_id])
-    @post = @user.posts.find_by_id(params[:id]) unless @user.nil?
-    @comments = @post.comments.includes(:author).order(:created_at) unless @post.nil?
-  end
-
-  private
-
-  def find_post
     @post = Post.find(params[:id])
+    @comments = @post.comments.includes(:author)
   end
 end
