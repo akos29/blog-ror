@@ -39,7 +39,7 @@ class PostsController < ApplicationController
 
   def show
     @user = User.where(id: params[:user_id]).first
-    @posts = Post.includes(:comments[ :author]).where(id: params[:user_id]).order(created_at: :desc)
+    @posts = Post.includes(:comments[:author]).where(id: params[:user_id]).order(created_at: :desc)
     @comments = @posts.comments
   end
 end
