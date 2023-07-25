@@ -1,5 +1,5 @@
 <h1>Welcome, <%= @user.name %></h1>
-<%= render "shared/user", user: @user %>
+<%= render partial: "shared/user", locals:  {user: @user }  %>
 <div class = 'user_detail'>
   <h3>Bio<h3>
   <p> <%= @user.bio%><p>

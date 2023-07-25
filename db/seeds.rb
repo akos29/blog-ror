@@ -1,9 +1,8 @@
 
 user = User.create!(
   name: 'Abebe',
-  bio: 'Story of Abe\'s life ...',
-  photo: 'https://i.pravatar.cc/300'
-  photo: 'https://i.pravatar.cc/300'
+  photo: 'https://i.pravatar.cc/300',
+  bio: 'Story of Abe\'s life ...'
 )
 second_user = User.create(name: 'Lilly', photo: 'https://i.pravatar.cc/300', bio: 'Teacher from Poland.')
 first_user = User.create(name: 'Tom', photo: 'https://i.pravatar.cc/300', bio: 'Teacher from Mexico.')

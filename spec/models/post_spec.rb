@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  user = User.create(name: 'Kibre', photo: 'link to photo', bio: 'Rails Developer')
+  user = User.create(name: 'Kibre', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com', bio: 'Rails Developer')
 
   subject { Post.new(author: user, title: 'About Rais Rspec', text: 'Hello') }
 
