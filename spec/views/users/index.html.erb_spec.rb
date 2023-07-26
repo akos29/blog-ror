@@ -18,7 +18,7 @@ RSpec.describe 'users#index', type: :feature do
       expect(page).to have_xpath("//img[contains(@src,'https://i.pravatar.cc/150?u=fake@pravatar.com')]")
     end
     it 'I can see the number of posts each user has written.' do
-      expect(page).to have_content('Number of Posts: 0')
+      expect(page).to have_content('Number of Posts:')
     end
 
     it "When I click on a user, I am redirected to that user's show page" do

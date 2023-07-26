@@ -139,6 +139,10 @@ To run tests, run the following command:
 - Twitter: [@boo_shehab2000](https://twitter.com/boo_shehab2000)
 - LinkedIn: [boo-shehab](https://www.linkedin.com/in/boo-shehab)
 
+👤 **Sasan Moshirabadi**
+
+- GitHub: [@dev89s](https://github.com/dev89s)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/sasan-moshirabadi)
 
 ## 🔭 Future Features <a name="future-features"></a>
 

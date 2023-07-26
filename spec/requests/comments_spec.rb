@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Comments', type: :request do
   let(:user) do
-    User.create(name: 'jeje', bio: 'Hi',
-                photo: 'https://imglarger.com/Images/before-after/ai-image-enlarger-1-before-2.jpg')
+    User.first
   end
   let(:post) { Post.create(text: 'Hi', title: 'bye', author_id: user.id) }
 
