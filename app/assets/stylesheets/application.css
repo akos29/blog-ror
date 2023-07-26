@@ -1,28 +1,71 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+:root {
+  --primary: #4169e1;
+  --secondary: #69e141;
+  --text-primary: #fff;
+  --text-secondary: #e14169;
+  --primary-bg: #17191a;
+  --secondary-bg: rgb(34, 37, 39);
+}
+
+* {
+  color: var(--text-primary);
+}
+
+input,
+textarea {
+  color: var(--primary-bg);
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: var(--primary-bg) !important;
+}
+
+.container-fluid,
+.navbar,
+.bg-body-tertiary {
+  background-color: var(--secondary-bg) !important;
+}
+
+a:link {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--secondary);
+}
+
+a:active {
+  color: var(--text-secondary);
+}
+
+.btn {
+  background-color: #4169e1 !important;
+  color: var(--text-primary) !important;
+  margin-top: 20px;
+}
 
 .user_profile {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #e2e2e2;
-  border: 1px solid black;
+  background-color: var(--primary);
+  color: var(--text-primary);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin-top: 20px;
+}
+
+.user_profile > img {
+  width: 10px;
+  height: auto;
+}
+
+.users_container {
+  padding: 2rem 0;
+  margin-bottom: 1rem;
 }
 
 .user_detail,
@@ -31,9 +74,76 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #e2e2e2;
+  background-color: var(--primary);
+  color: var(--text-primary);
   border: 1px solid black;
   border-radius: 5px;
   padding: 1rem;
   margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.post_container,
+.comment_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid black;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 15px;
+  font-size: 1.25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 6px 12px -2px, rgba(0, 0, 0, 0.3) 0 3px 7px -3px;
+}
+
+.post_container > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.15rem;
+}
+
+.comment_container span {
+  padding: 1rem;
+}
+
+.comment_container > div:nth-child(2n) {
+  align-self: baseline;
+  background-color: var(--text-secondary);
+  border-radius: 4px;
+  color: var(--text-primary);
+  padding-right: 5rem;
+}
+
+.container_footer {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.likes_comments_count_right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 20px;
+}
+
+.likes_comments_count_right > span {
+  color: var(--secondary);
+  font-size: 1.25rem;
+}
+
+.rev {
+  color: var(--primary-bg);
+  background-color: var(--secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+.container_footer a.btn {
+  background-color: var(--primary) !important;
+  color: var(--text-primary) !important;
+  margin-top: 20px;
 }

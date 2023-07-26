@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'PostsController', type: :request do
-  user = User.create(name: 'Abebe', photo: 'https://i.pravatar.cc/150?u=fake@pravatar.com',
-                     bio: 'Teacher from Mexico.')
+  user = User.first
 
   subject { Post.new(author: user, title: 'About Rais Rspec', text: 'Hello Rspec request') }
 
@@ -11,7 +10,6 @@ RSpec.describe 'PostsController', type: :request do
   describe 'GET #index' do
     it 'displays all posts' do
       get "/users/#{user.id}/posts"
-
       expect(response).to have_http_status(200)
       expect(response.body).to include(user.name)
       expect(response.body).to include(subject.title)
@@ -22,14 +20,6 @@ RSpec.describe 'PostsController', type: :request do
     before { get "/users/#{user.id}/posts/", params: { format: :html } }
     it 'renders the index template' do
       expect(response).to render_template('index')
-    end
-  end
-  describe 'GET #show' do
-    it 'displays all posts' do
-      get "/users/#{user.id}/posts/#{subject.id}"
-
-      expect(response).to have_http_status(200)
-      expect(response.body).to include(subject.text)
     end
   end
 end

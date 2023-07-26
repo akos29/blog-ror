@@ -20,6 +20,6 @@ class User < ApplicationRecord
   has_many :likes, foreign_key: 'author_id'
 
   def show_recent_posts
-    posts.where(author_id: id).first(3)
+    posts.order(created_at: :desc).first(3)
   end
 end

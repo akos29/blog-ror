@@ -1,0 +1,11 @@
+<% @posts.each do |post| %>    
+  <div class='post_container'>
+    <h2><%= post.title %></h2> 
+    <%= post.text %>
+    <div class='likes_comments_count_right'>
+      <span>Likes: <span class ='rev'><%= post.likes_count %></span></span>
+      <span>Comments: <span class ='rev'><%= post.comments_count %></span></span>
+    </div>
+  </div>
+  
+<% end %>

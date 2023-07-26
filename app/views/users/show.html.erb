@@ -1,19 +1,21 @@
 <h1>Welcome, <%= @user.name %></h1>
-<div>
-    
-    <div class = 'user_profile'>
-      <%= image_tag(@user.photo, :size => "80x110", :alt => "#{@user.name}", :title => "Profile Picture for #{@user.name}") %>
-       <h2><%= @user.name %></h2> 
-      <%= @user.posts_count %>
-    </div> 
-    <div class = 'user_detail'>
-      <h3>Bio<h3>
-      <p> <%= @user.bio%><p>
-    </div>
-    <div class = 'project_detail'>
-      <h3>Project #1<h3>
-      <p> <%= %><p>
-    </div>
-    <%# link_to  %>
+<%= render partial: "shared/user", locals:  {user: @user }  %>
+<div class = 'user_detail'>
+  <h3>Bio<h3>
+  <p> <%= @user.bio%><p>
+</div>  
 
+<div>
+  <% @user.show_recent_posts.each do |post| %>
+    <div class='post-card'>
+      <h3><%=link_to post.title, user_post_path(@user.id, post), :class => 'post-title'%></h3>
+      <p><%= post.text %></p>
+      <div class='likes-comments'>
+        <p>Comments: <%= post.comments_count.nil? ? 0 : post.comments_count %></p>
+        <p>Likes: <%= post.likes_count.nil? ? 0 : post.likes_count %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
+
+<button><%=link_to 'See all posts', user_posts_path(@user), :class => 'see-all-btn'%></button>
