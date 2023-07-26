@@ -44,7 +44,7 @@ RSpec.describe 'users#show', type: :feature do
     end
 
     scenario 'I can see the correct post body', negative: true do
-      expect(page).to_not have_content('Abebe text' + 'some other text')
+      expect(page).to_not have_content('Abebe textsome other text')
     end
 
     scenario 'I can see the username of each commentor', positive: true do

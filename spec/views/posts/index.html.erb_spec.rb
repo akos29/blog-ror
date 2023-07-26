@@ -31,16 +31,16 @@ RSpec.describe 'Posts Index', type: :feature do
       expect(page).to have_content('Abebe1 Post')
     end
 
-    scenario "I should see the correct post title", negative: true do
-      expect(page).to_not have_content('Abebe1 Post' + 'some other text')
+    scenario 'I should see the correct post title', negative: true do
+      expect(page).to_not have_content('Abebe1 Postsome other text')
     end
 
     scenario "I can see some of the post's body", positive: true do
       expect(page).to have_content('Abebe2 Post')
     end
 
-    scenario "I should see the correct post body", negative: true do
-      expect(page).to_not have_content('Abebe2 Post' + 'some other text')
+    scenario 'I should see the correct post body', negative: true do
+      expect(page).to_not have_content('Abebe2 Postsome other text')
     end
 
     scenario 'I can see the first comments on a post', positive: true do
